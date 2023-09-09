@@ -10,7 +10,7 @@ function updateTimeAndDay(){
 ]
     const now= new Date();
     const currentDay = daysOfWeek[now.getUTCDay()]
-    const currentUTC = now.toUTCString();
+    const currentUTC = now.getTime();
 
     const dayElement = document.querySelector('[data-testid="currentDayOfTheWeek"]');
     const timeElement = document.querySelector('[data-testid="currentUTCTime"]');
