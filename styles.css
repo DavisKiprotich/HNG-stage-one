@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
+    background: url(./gggrain.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hero{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+}
+.logo{
+    display: flex;
+    width: 10%;
+    padding-left: 1.5rem;
+    margin-top: 1rem;
+    font-family: cursive;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: aliceblue;
+}
+.detail{
+    margin-left: 8%;
+    margin-top: 15%;
+}
+.detail h1{
+    font-size: 50px;
+    color: #2cad82;
+    margin-bottom: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.detail h1:hover{
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.detail span{
+    color: #2cad82;
+}
+.detail p{
+    margin: 10px 0;
+    color: rgb(76, 187, 238);
+}
+
+.detail a[data-testid="githubURL"]{
+    background: #fff;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-weight: 400;
+    color: #2cad82;
+    display: inline-block;
+    margin: 30px 0;
+    border-radius: 15px;
+}
+.detail a[data-testid="githubURL"]:hover{
+    background: #2cad82;
+    color: #fff;
+}
+.images{
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+.images img[data-testid = 'slackDisplayImage']{
+    height: 100%;
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    transform: translateX(-50%) rotate(-30deg) ;
+    left: 45%;
+    bottom: 0;
+    transition: bottom 1s left 1s;
+}
+.images:hover .background{
+    bottom: 40px;
+}
+.images:hover .mine{
+    left: 45%;
+    
+}
+.time-zone details[data-testid="currentDayOfTheWeek"]{
+    color: #2cad82;
+    margin-left: 10%;
+    background: transparent;
+    width: 10%;
+    padding: 8px 15px;
+    margin-bottom: 5px;
+    border-radius: 7px;    
+    cursor: pointer;
+}
+.time-zone details[data-testid="currentDayOfTheWeek"]:hover{
+    background: url(./gggrain.svg);
+}
+.time-zone details[data-testid="currentUTCTime"]{
+    color: #2cad82;
+    margin-left: 10%;
+    background: transparent;    
+    cursor: pointer;
+    width: 15%;
+    padding: 8px 15px;
+    margin-bottom: 5px;
+    border-radius: 7px;
+}
+.time-zone details[data-testid="currentUTCTime"]{
+    background: url(./gggrain.svg);
+}
+
+/* media queries */
+
+@media screen and (max-width : 768px){
+    body{
+        justify-content: center;
+        text-align: center;
+        margin: 10%;
+        max-width: fit-content;
+        max-height: fit-content;
+    }
+    .images{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 120px;
+        height: 120px;
+        position: absolute;
+        top: 10%;
+        left: 45%;
+        margin-bottom: 5%;
+    }
+
+    .mine{
+        grid-area: 1/1/2/2;
+    }
+    .detail{
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 75px;
+        margin-left: 16%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .detail h1{
+        margin-left: 28%;
+        margin-top: 55%;
+        font-size: 30px;
+    }
+    .detail span{
+        margin-left: 30%;
+    }
+    
+    .time-zone{
+        margin-left: 20%;
+        width: fit-content;
+    }
+}
